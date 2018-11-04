@@ -34,3 +34,6 @@
 # vscode workspace
 build/
 .vscode/
+
+# macos
+.DS_Store

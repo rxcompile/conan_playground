@@ -4,6 +4,10 @@ project(main CXX)
 include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
 conan_basic_setup(TARGETS)
 
+set (CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
+
+include(cotire)
+
 add_subdirectory(binary)
 add_subdirectory(lib1)
 add_subdirectory(lib2)
