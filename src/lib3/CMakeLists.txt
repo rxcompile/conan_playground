@@ -11,3 +11,6 @@ install(TARGETS lib3
     RUNTIME DESTINATION bin
     INCLUDES DESTINATION include
 )
+
+enable_testing()
+add_subdirectory(test)

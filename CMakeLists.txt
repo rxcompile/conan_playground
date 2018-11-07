@@ -3,17 +3,16 @@ project(main CXX)
 
 set (CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
 
-include(conan)
-conan_cmake_run(CONANFILE conanfile.txt
-    BASIC_SETUP CMAKE_TARGETS
-    BUILD missing)
-
+# CMake usefull scripts setup
+include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
+conan_basic_setup(TARGETS)
 include(cotire)
 
+# Global compile options for the project
+add_compile_options(-Wall -Wpedantic)
+
+# targets
 add_subdirectory(src/binary)
 add_subdirectory(src/lib1)
 add_subdirectory(src/lib2)
 add_subdirectory(src/lib3)
-
-enable_testing()
-add_subdirectory(src/test)
