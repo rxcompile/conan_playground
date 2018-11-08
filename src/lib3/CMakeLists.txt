@@ -12,5 +12,7 @@ install(TARGETS lib3
     INCLUDES DESTINATION include
 )
 
-enable_testing()
-add_subdirectory(test)
+if(ENABLE_TESTS)
+    enable_testing()
+    add_subdirectory(test)
+endif()

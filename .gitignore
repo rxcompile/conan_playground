@@ -32,7 +32,7 @@
 *.app
 
 # vscode workspace
-build/
+build*/
 .vscode/
 
 # macos

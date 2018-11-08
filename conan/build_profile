@@ -1,0 +1,9 @@
+[settings]
+build_type=Debug
+arch_build=x86_64
+
+[options]
+run_tests:false
+
+[env]
+CONAN_CMAKE_GENERATOR=Ninja
